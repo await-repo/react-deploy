@@ -2,8 +2,8 @@ export const contacts = [
     {
         id: 19,
         title: "LinkedIn Profile",
-        content: "https://www.linkedin.com/in/luis-a-0b22651b0",
-        path: "https://www.linkedin.com/in/luis-a-0b22651b0"
+        content: "https://www.linkedin.com/in/luis-avila-0b22651b0",
+        path: "https://www.linkedin.com/in/luis-avila-0b22651b0"
     },
     {
         id: 20,
