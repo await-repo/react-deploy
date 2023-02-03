@@ -3,7 +3,7 @@ export function Linked({ title, content, path }) {
         <>
             {
                 path == "" ?
-                    <li className="py-1">
+                    <li className="pl-2">
                         <span className="font-medium">
                             {title}
                         </span>
@@ -12,12 +12,20 @@ export function Linked({ title, content, path }) {
                         </div>
                     </li>
                     :
-                    <li className="py-1">
-                        <a href={path} className="font-medium visited:text-purple-900">
+                    <li className="pl-2">
+                        <a 
+                            href={path} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="font-medium visited:text-purple-900">
                             {title}
                         </a>
                         <div>
-                            <a href={path} className="text-blue-500 visited:text-purple-900">
+                            <a 
+                                href={path} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-blue-500 visited:text-purple-900">
                                 {content}
                             </a>
                         </div>

@@ -1,7 +1,7 @@
 export function Percent({ title, percent }) {
-    return <div className="py-3">
+    return <div className="">
         <div className="flex justify-between mb-1">
-            <span className="font-bold">
+            <span className="font-bold flex">
                 {title}
             </span>
             <span className="font-bold ">

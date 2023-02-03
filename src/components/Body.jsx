@@ -2,7 +2,7 @@ import { Percent } from './Percent'
 import { Details } from './Details'
 
 import { profetionalSkills } from "../data/profetionalSkills"
-import { certifications } from "../data/certifications"
+import { courses } from "../data/courses"
 import { languajes } from "../data/languajes"
 import { extracurriculars } from "../data/extracurricular"
 import { experiences } from "../data/experiences"
@@ -27,15 +27,17 @@ export function Body() {
 
                         <Card title="Contact Info">
                             <div className="px-4 break-words">
-                                <ul className="list-disc">
+                                <ul>
                                     {contacts.map((contact) => {
                                         return (
-                                            <Linked
-                                                key={contact.id}
-                                                title={contact.title}
-                                                content={contact.content}
-                                                path={contact.path}
-                                            />
+                                            <div key= {contact.id} className = "flex py-2">
+                                                <contact.icon style={{fontSize: '25px'}} className={contact.color}/>
+                                                <Linked
+                                                    title = {contact.title}
+                                                    content = {contact.content}
+                                                    path = {contact.path}
+                                                />
+                                            </div>
                                         )
                                     })}
                                 </ul>
@@ -60,11 +62,12 @@ export function Body() {
                         <Card title="Languajes">
                             {languajes.map((languaje) => {
                                 return (
-                                    <Percent
-                                        key={languaje.id}
-                                        title={languaje.title}
-                                        percent={languaje.percent}
-                                    />
+                                    <div className="py-3" key={languaje.id}>
+                                        <Percent
+                                            title={languaje.title}
+                                            percent={languaje.percent}
+                                        />
+                                    </div>
                                 )
                             })}
                         </Card>
@@ -115,13 +118,14 @@ export function Body() {
 
                         <Card title="Certifications">
                             <div className="grid lg:grid-cols-2 gap-4 pb-2">
-                                {certifications.map((certification) => {
+                                {courses.map((course) => {
                                     return (
                                         <Details
-                                            key={certification.id}
-                                            date={certification.date}
-                                            title={certification.title}
-                                            content={certification.content}
+                                            key={course.id}
+                                            date={course.date}
+                                            title={course.title}
+                                            content={course.content}
+                                            path={course.path}
                                         />
                                     )
                                 })}
@@ -130,15 +134,42 @@ export function Body() {
 
 
                         <Card title="Professional skills">
-                            {profetionalSkills.map((skill) => {
-                                return (
-                                    <Percent
-                                        key={skill.id}
-                                        title={skill.title}
-                                        percent={skill.percent}
-                                    />
-                                )
-                            })}
+                            <div className="grid lg:grid-cols-2 gap-x-10 gap-y-2 pb-2">
+                                {profetionalSkills.map((skill) => {
+                                    return (
+                                        <div key={skill.id}>
+                                            <div className="grid grid-cols-6">
+                                                <div>
+                                                    <skill.icon style={{fontSize: '35px',}} 
+                                                    className = {`mt-1 ${skill.color}`}/>
+                                                </div>
+                                                <div className="col-span-5">
+                                                    <Percent
+                                                        title = {skill.title}
+                                                        percent = {skill.percent}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="pt-3 pb-4">
+                                                <ul className="text-slate-700 grid xl:grid-cols-3 grid-cols-2 gap-x-3 gap-y-3">
+                                                    {skill.libraries.map((library) => {
+                                                        return (
+                                                            <li key={library.id}>
+                                                                {library.name} 
+                                                                {library.related === "" ?
+                                                                    <></>
+                                                                    :
+                                                                    <small> ({library.related}) </small>
+                                                                }
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </Card>
 
 

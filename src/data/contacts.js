@@ -1,26 +1,37 @@
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { IoIosMail } from 'react-icons/io';
+import { MdLocationOn } from 'react-icons/md';
+
 export const contacts = [
     {
-        id: 19,
-        title: "LinkedIn Profile",
-        content: "https://www.linkedin.com/in/luis-a-0b22651b0",
-        path: "https://www.linkedin.com/in/luis-a-0b22651b0"
+        id: 219,
+        title: "Luis Ávila",
+        content: "",
+        color: "text-sky-700",
+        path: "https://www.linkedin.com/in/luis-avila-0b22651b0",
+        icon: AiFillLinkedin
     },
     {
-        id: 20,
-        title: "Email address",
-        content: "ingeniero.luis.angel.contacto@gmail.com",
-        path: ""
+        id: 220,
+        title: "ingeniero.luis.angel.contacto@gmail.com",
+        content: "",
+        color: "",
+        path: "",
+        icon: IoIosMail
     },
     {
-        id: 21,
-        title: "GitHub repository",
-        content: "https://github.com/await-repo",
-        path: "https://github.com/await-repo"
+        id: 221,
+        title: "await-repo",
+        content: "",
+        path: "https://github.com/await-repo",
+        icon: AiFillGithub
     },
     {
-        id: 22,
-        title: "Location",
-        content: "Heroica Puebla de Zaragoza, Puebla, México",
-        path: ""
+        id: 222,
+        title: "Heroica Puebla de Zaragoza, Puebla, México",
+        content: "",
+        color: "",
+        path: "",
+        icon: MdLocationOn
     }
 ];
