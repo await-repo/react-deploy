@@ -25,13 +25,5 @@ export const contacts = [
         content: "",
         path: "https://github.com/await-repo",
         icon: AiFillGithub
-    },
-    {
-        id: 222,
-        title: "Heroica Puebla de Zaragoza, Puebla, México",
-        content: "",
-        color: "",
-        path: "",
-        icon: MdLocationOn
     }
 ];

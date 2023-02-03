@@ -18,8 +18,8 @@ export function Body() {
         <div className="bg-slate-100 shadow-2xl">
             <div className="sm:p-10 p-5">
 
-                <p className="text-5xl text-center">
-                    Luis Ángel Ávila Alvarado
+                <p className="text-7xl text-center">
+                    Luis Ávila
                 </p>
 
                 <div className="grid md:grid-cols-5 mx-auto gap-10 pt-20">
